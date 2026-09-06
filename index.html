@@ -62,6 +62,23 @@
             border-radius: 8px;
             color: #666;
         }
+        /* 敏感个人信息突出标示：加粗 + 下划线（合规要求） */
+        .sensitive {
+            font-weight: 700;
+            color: #d93025;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            text-decoration-thickness: 2px;
+        }
+        .callout {
+            background: #fff4e5;
+            border-left: 4px solid #f9ab00;
+            padding: 12px 16px;
+            border-radius: 4px;
+            margin: 16px 0;
+            color: #5f4700;
+            line-height: 1.7;
+        }
     </style>
 </head>
 <body>
@@ -71,11 +88,15 @@
     <h2>1. 引言</h2>
     <p>微天气（"本应用"、"我们"）是一款提供天气预报的本地工具类应用。我们高度重视您的隐私，本政策说明您在使用本应用时我们如何收集、使用和保护您的信息。本应用无需注册或登录即可使用。</p>
 
+    <div class="callout">
+        <strong>敏感个人信息提示：</strong>为向你提供天气服务并维持免费运营，本应用会处理你的<span class="sensitive">位置信息（精确 / 粗略）</span>等<strong>个人敏感信息</strong>，并接入<span class="sensitive">穿山甲（GroMore / Pangle）广告 SDK</span>。本政策中，所有个人敏感信息的处理目的、方式与范围，均以<span class="sensitive">加粗并下划线</span>的方式突出标示，详见第 2 节与第 5 节。
+    </div>
+
     <h2>2. 我们收集的信息</h2>
 
     <h3>2.1 位置信息</h3>
     <ul>
-        <li><strong>精确 / 粗略位置</strong>：当您使用"定位获取当地天气"时，本应用会请求位置权限，仅用于将您的位置发送给天气数据服务商，以返回对应城市的天气。</li>
+        <li><span class="sensitive">精确 / 粗略位置</span>：当您使用"定位获取当地天气"时，本应用会请求<span class="sensitive">位置权限</span>，仅用于将您的位置发送给天气数据服务商，以返回对应城市的天气。</li>
         <li><strong>您主动添加的城市</strong>：您搜索或手动添加的城市的名称、经纬度或和风 LocationID。</li>
     </ul>
 
@@ -88,7 +109,7 @@
 
     <h3>2.3 广告相关数据</h3>
     <ul>
-        <li>本应用内置穿山甲（GroMore / Pangle，字节跳动）广告 SDK。该 SDK 可能在使用免费版时收集<strong>广告标识符（Advertising ID）、设备型号、系统版本、网络类型、粗略位置</strong>，用于投放与衡量广告效果。</li>
+        <li>本应用内置<span class="sensitive">穿山甲（GroMore / Pangle，字节跳动）广告 SDK</span>。该 SDK 可能在使用免费版时收集<span class="sensitive">广告标识符（Advertising ID）、设备型号、系统版本、网络类型、粗略位置</span>，用于投放与衡量广告效果。</li>
     </ul>
 
     <h3>2.4 我们【不】收集的信息</h3>
@@ -101,7 +122,7 @@
 
     <h2>3. 我们如何使用信息</h2>
     <ul>
-        <li><strong>提供天气服务</strong>：根据您的位置或所选城市返回天气预报。</li>
+        <li><strong>提供天气服务</strong>：根据您的<span class="sensitive">位置</span>或所选城市返回天气预报。</li>
         <li><strong>广告投放</strong>：在免费版中展示广告以维持运营。</li>
         <li><strong>改进应用</strong>：通过匿名诊断数据修复问题、优化体验。</li>
         <li><strong>客户支持</strong>：回复您的咨询。</li>
@@ -109,9 +130,9 @@
 
     <h2>4. 数据存储与安全</h2>
     <ul>
-        <li><strong>天气请求</strong>：经 HTTPS/TLS 加密发送至和风天气（QWeather）服务端；位置信息仅用于获取天气，不会存入我们自己的服务器（本应用无账号后端）。</li>
+        <li><strong>天气请求</strong>：经 HTTPS/TLS 加密发送至和风天气（QWeather）服务端；<span class="sensitive">位置信息</span>仅用于获取天气，不会存入我们自己的服务器（本应用无账号后端）。</li>
         <li><strong>本机数据</strong>：您收藏的城市与设置仅存储在您设备本地。</li>
-        <li><strong>广告数据</strong>：由穿山甲 SDK 按其隐私政策独立处理。</li>
+        <li><strong>广告数据</strong>：由<span class="sensitive">穿山甲 SDK</span>按其隐私政策独立处理。</li>
         <li><strong>传输加密</strong>：所有网络传输均使用 TLS 加密。</li>
     </ul>
 
@@ -120,14 +141,14 @@
     <h3>和风天气 QWeather</h3>
     <ul>
         <li><strong>用途</strong>：提供天气数据</li>
-        <li><strong>共享数据</strong>：位置（城市 / 经纬度）、所选城市</li>
+        <li><strong>共享数据</strong>：<span class="sensitive">位置（城市 / 经纬度）</span>、所选城市</li>
         <li><strong>隐私政策</strong>：<a href="https://www.qweather.com/privacy.html" target="_blank">https://www.qweather.com/privacy.html</a></li>
     </ul>
 
     <h3>穿山甲 GroMore / Pangle（字节跳动）</h3>
     <ul>
         <li><strong>用途</strong>：广告投放与效果衡量</li>
-        <li><strong>共享数据</strong>：广告标识符、设备信息、网络信息、粗略位置</li>
+        <li><strong>共享数据</strong>：<span class="sensitive">广告标识符、设备信息、网络信息、粗略位置</span></li>
         <li><strong>隐私政策</strong>：<a href="https://www.pangleglobal.com/privacy" target="_blank">https://www.pangleglobal.com/privacy</a></li>
     </ul>
 
@@ -152,13 +173,13 @@
     <h2>8. 数据共享</h2>
     <p>我们<strong>不会出售</strong>您的个人信息。仅在以下情形共享：</p>
     <ul>
-        <li>为提供天气服务，与和风天气共享位置信息；</li>
-        <li>为投放广告，与穿山甲共享广告相关数据；</li>
+        <li>为提供天气服务，与和风天气共享<span class="sensitive">位置信息</span>；</li>
+        <li>为投放广告，与穿山甲共享<span class="sensitive">广告相关数据</span>；</li>
         <li>法律要求、保护我们的权利或安全所必需时。</li>
     </ul>
 
     <h2>9. 国际用户</h2>
-    <p>您的位置与广告相关数据可能传输至中国境内外的服务商（如和风天气、字节跳动）服务器。使用本应用即表示您同意此类数据传输，我们将采取合理措施保障数据安全。</p>
+    <p>您的<span class="sensitive">位置</span>与<span class="sensitive">广告相关数据</span>可能传输至中国境内外的服务商（如和风天气、字节跳动）服务器。使用本应用即表示您同意此类数据传输，我们将采取合理措施保障数据安全。</p>
 
     <h2>10. GDPR 合规（欧洲用户）</h2>
     <p>对于欧洲经济区（EEA）用户：</p>
