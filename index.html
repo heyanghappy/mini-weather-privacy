@@ -109,8 +109,12 @@
 
     <h3>2.3 广告相关数据</h3>
     <ul>
-        <li>本应用内置<span class="sensitive">穿山甲（GroMore / Pangle，字节跳动）广告 SDK</span>。该 SDK 可能在使用免费版时收集<span class="sensitive">广告标识符（Advertising ID）、设备型号、系统版本、网络类型、粗略位置</span>，用于投放与衡量广告效果。</li>
+        <li>本应用内置<span class="sensitive">穿山甲（GroMore / Pangle，字节跳动）广告 SDK</span>。该 SDK 可能在使用免费版时收集<span class="sensitive">设备标识符（如 OAID、Android ID、Advertising ID）、设备型号、系统版本、网络类型、粗略位置</span>，用于广告投放、归因与反作弊、衡量广告效果。其中 <span class="sensitive">OAID</span> 与 <span class="sensitive">Android ID</span> 为可用于识别设备的标识符，其收集目的、方式与范围已在本节及第 5 节明确告知。</li>
     </ul>
+
+    <div class="callout">
+        <strong>关于个性化广告与第三方信息来源：</strong>本应用的广告由穿山甲（GroMore / Pangle）SDK 投放，可能基于设备标识符（<span class="sensitive">OAID、Android ID、Advertising ID</span> 等）进行<span class="sensitive">个性化广告推送</span>。这些设备标识符由您的设备或操作系统分配（即来自第三方来源）；我们在您同意隐私政策并初始化广告 SDK 之后，依据您的同意将其用于广告展示与归因。您可随时通过系统设置限制或关闭个性化广告（详见第 6 节）。
+    </div>
 
     <h3>2.4 我们【不】收集的信息</h3>
     <ul>
@@ -123,7 +127,7 @@
     <h2>3. 我们如何使用信息</h2>
     <ul>
         <li><strong>提供天气服务</strong>：根据您的<span class="sensitive">位置</span>或所选城市返回天气预报。</li>
-        <li><strong>广告投放</strong>：在免费版中展示广告以维持运营。</li>
+        <li><strong>广告投放</strong>：在免费版中展示广告以维持运营，包括基于设备标识符的<span class="sensitive">个性化广告推送</span>。</li>
         <li><strong>改进应用</strong>：通过匿名诊断数据修复问题、优化体验。</li>
         <li><strong>客户支持</strong>：回复您的咨询。</li>
     </ul>
@@ -133,6 +137,7 @@
         <li><strong>天气请求</strong>：经 HTTPS/TLS 加密发送至和风天气（QWeather）服务端；<span class="sensitive">位置信息</span>仅用于获取天气，不会存入我们自己的服务器（本应用无账号后端）。</li>
         <li><strong>本机数据</strong>：您收藏的城市与设置仅存储在您设备本地。</li>
         <li><strong>广告数据</strong>：由<span class="sensitive">穿山甲 SDK</span>按其隐私政策独立处理。</li>
+        <li><strong>无自有服务器中转</strong>：本应用没有自有后端服务器，您的个人信息仅直接发送至上述第三方服务商（和风天气、穿山甲），<strong>不存在先传输至我们自有服务器后再与第三方共享的情形</strong>。</li>
         <li><strong>传输加密</strong>：所有网络传输均使用 TLS 加密。</li>
     </ul>
 
@@ -147,8 +152,8 @@
 
     <h3>穿山甲 GroMore / Pangle（字节跳动）</h3>
     <ul>
-        <li><strong>用途</strong>：广告投放与效果衡量</li>
-        <li><strong>共享数据</strong>：<span class="sensitive">广告标识符、设备信息、网络信息、粗略位置</span></li>
+        <li><strong>用途</strong>：广告投放与效果衡量（含基于设备标识符的个性化广告推送与归因）</li>
+        <li><strong>共享数据</strong>：<span class="sensitive">设备标识符（如 OAID、Android ID、Advertising ID）、设备信息、网络信息、粗略位置</span></li>
         <li><strong>隐私政策</strong>：<a href="https://www.pangleglobal.com/privacy" target="_blank">https://www.pangleglobal.com/privacy</a></li>
     </ul>
 
@@ -163,7 +168,7 @@
     <ul>
         <li><strong>访问</strong>：本应用不存储您的个人账号数据；您可随时在应用内查看本机保存的城市与设置。</li>
         <li><strong>更正 / 删除</strong>：在系统设置中清除应用数据或卸载应用，即可删除全部本机数据。</li>
-        <li><strong>广告选择退出</strong>：您可在系统设置中开启"限制广告跟踪"（iOS）或重置 / 删除广告 ID（Android），以减少个性化广告。</li>
+        <li><strong>广告选择退出 / 个性化广告管理</strong>：本应用的个性化广告会使用上述设备标识符（<span class="sensitive">OAID、Android ID、Advertising ID</span>）。您可在系统设置中开启"限制广告跟踪"（iOS），或重置 / 删除广告 ID、关闭 OAID 采集（部分 Android 设备支持在"设置 → 隐私 → 广告与隐私"中关闭），以减少个性化广告。关闭后您仍会看到广告，但相关性会降低。</li>
         <li><strong>撤回同意</strong>：随时停止使用本应用。</li>
     </ul>
 
@@ -174,7 +179,7 @@
     <p>我们<strong>不会出售</strong>您的个人信息。仅在以下情形共享：</p>
     <ul>
         <li>为提供天气服务，与和风天气共享<span class="sensitive">位置信息</span>；</li>
-        <li>为投放广告，与穿山甲共享<span class="sensitive">广告相关数据</span>；</li>
+        <li>为投放广告，与穿山甲共享<span class="sensitive">广告相关数据（含设备标识符 OAID、Android ID 等）</span>；</li>
         <li>法律要求、保护我们的权利或安全所必需时。</li>
     </ul>
 
